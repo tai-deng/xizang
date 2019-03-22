@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+  <script src="js/avalon.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/data.min.js" type="text/javascript" charset="utf-8"></script>
+  <title>地域分析</title>
+</head>
+
+<body ms-controller="regional_analysis">
+  <!-- <div class="jump">
+			<a href="项目详情.html"><img src="img/jump.png"/></a>
+    </div> -->
+  <a href="../screen-display.html" style="text-decoration: none;">
+    <div class="head">
+      <h1>地域分析</h1>
+    </div>
+    <div class="regional_analysis_kj">
+      <div class="regional_analysis">
+        <ul class="roll_data">
+          <li>
+            <h2>项目个数排名:</h2>
+            <div id="demoin1">
+              <div id="demo1" ms-html='list_data[0].content'></div>
+              <div id="demo1r"></div>
+            </div>
+          </li>
+          <li>
+            <h2>开复工比率排名:</h2>
+            <div id="demoin2">
+              <div id="demo2" ms-html='list_data[1].content'></div>
+              <div id="demo2r"></div>
+            </div>
+          </li>
+          <li>
+            <h2>2018计划总投资额排名（万元）:</h2>
+            <div id="demoin3">
+              <div id="demo3" ms-html='list_data[2].content'></div>
+              <div id="demo3r"></div>
+            </div>
+          </li>
+          <li>
+            <h2>2018当前投资完成比率排名:</h2>
+            <div id="demoin4">
+              <div id="demo4" ms-html='list_data[3].content'></div>
+              <div id="demo4r"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="regional_analysis_nr">
+          <div class="left">
+            <h3>
+              <img ms-attr="{src:@img}" />
+            </h3>
+          </div>
+          <div class="right">
+
+            <ul class="analysis_t">
+              <li>
+                <h2>县区</h2>
+                <p>{{dq_data.area}}</p>
+              </li>
+              <li>
+                <h2>项目数量</h2>
+                <p>{{dq_data.number}}个</p>
+              </li>
+              <li>
+                <h2>开复工比例</h2>
+                <p>{{dq_data.ratio}}%</p>
+              </li>
+              <li class="er">
+                <h2>2018计划投资额</h2>
+                <p>{{dq_data.money}}万元</p>
+              </li>
+              <li class="sa">
+                <h2>当前完成投资额比率</h2>
+                <p>{{dq_data.money_ratio}}%</p>
+              </li>
+            </ul>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="415">
+                <col width="150">
+                <col width="260">
+                <col width="160">
+                <col width="160">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>项目名称</th>
+                  <th>分管单位</th>
+                  <th>分管领导</th>
+                  <th>项目阶段</th>
+                  <th>项目状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ms-for="(k,v) in @dq_data_list">
+                  <td style="valign='middle'">
+                    <span :if="v.name.length<15">{{v.name}}</span>
+                    <marquee style="float:left;" scrolldelay="200" :if="v.name.length>=15" direction="left" behavior="alternate">{{v.name}}</marquee>
+                  </td>
+                  <td>{{v.company}}</td>
+                  <td>{{v.leader}}</td>
+                  <td>{{v.stage}}</td>
+                  <td :class="[(@v.state=='进度滞后'? 'gules':'')]">{{v.state}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <script type="text/javascript">
+    dqfx = true;
+  </script>
+</body>
+
+</html>

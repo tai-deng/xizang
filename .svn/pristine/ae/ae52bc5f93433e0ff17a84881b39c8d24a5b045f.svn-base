@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>山南市建设项目发改委管理平台</title>
+    <!-- <link rel="stylesheet" href="../commission/css/commission.css" /> -->
+    <link rel="stylesheet" href="../../js/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/commission.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <!-- 屏幕自适应 -->
+    <script type="text/javascript">
+      var html = document.querySelector('html'),
+        rem = html.offsetWidth / 19.2;
+      html.style.fontSize = rem + 'px';
+      localStorage.setItem('rem', rem);
+      console.log(`缓存rem:${rem}`);
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="return">返回主平台</div>
+      <div class="header_title">
+        <span>山南市发改委管理平台</span>
+      </div>
+      <div class="header_content">
+        <span class="exhibition active">发改委平台</span>
+        <span class="platform">环保局平台</span>
+        <span class="date">2019年1月1日 09:01:02</span>
+      </div>
+    </div>
+    <!-- 左边箭头 -->
+    <div class="left_arrow_active" id="arrowLeft"></div>
+    <div class="wrapper">
+      <div class="box0">
+        <!-- <div class="top1"项目分布</div> -->
+        <div id="mychart_map01" style="width:100%;height:100%"></div>
+      </div>
+      <div class="box1">
+        <p>项目总数(个)</p>
+        <p class="number">522</p>
+      </div>
+      <div class="box2">
+        <p>总投资额(万元)</p>
+        <p class="number">9633229</p>
+      </div>
+      <div class="box3">
+        <div>
+          <p>资金到位项目(个)</p>
+          <p class="number">375</p>
+        </div>
+        <div>
+          <p>到位金额(万元)</p>
+          <p class="number">1574689</p>
+        </div>
+      </div>
+      <div class="box4">
+        <p>工程阶段(个)</p>
+        <div class="flex">
+          <div>
+            可研
+            <p class="number">54</p>
+          </div>
+          <div>
+            招投标
+            <p class="number">89</p>
+          </div>
+          <div>
+            建设
+            <p class="number">89</p>
+          </div>
+          <div>
+            交付
+            <p class="number">50</p>
+          </div>
+        </div>
+      </div>
+      <div class="box5">
+        <header>项目类型分布</header>
+        <div>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>建设类型</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>续建复工项目</td>
+              </tr>
+              <tr>
+                <td>新开工项目</td>
+              </tr>
+              <tr>
+                <td>续建待复工项目</td>
+              </tr>
+              <tr>
+                <td>拟开工项目</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>行业分类</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>农牧林水</td>
+              </tr>
+              <tr>
+                <td>交通能源</td>
+              </tr>
+              <tr>
+                <td>社会发展</td>
+              </tr>
+              <tr>
+                <td>市政稳定</td>
+              </tr>
+              <tr>
+                <td>环境资源</td>
+              </tr>
+              <tr>
+                <td>铁路</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="type1"></div>
+        <div id="type2"></div>
+      </div>
+      <div class="box6">
+        <div class="flex2">
+          <div>2018年度计划投资额(万元)</div>
+          <div class="number">2464191</div>
+        </div>
+        <div class="flex3">
+          <div>
+            <span>当前完成额度(万元)</span>
+            <p class="number">1574689</p>
+          </div>
+          <div>
+            <span>占本年度投资额(万元)</span>
+            <p class="number">1574689</p>
+          </div>
+        </div>
+      </div>
+      <div class="box7">
+        <p>建设状态(个)</p>
+        <div class="flex">
+          <div>
+            进度正常
+            <p class="number">235</p>
+          </div>
+          <div>
+            进度滞后
+            <p class="number">120</p>
+          </div>
+          <div>
+            停工
+            <p class="number">58</p>
+          </div>
+          <div>
+            拟开工
+            <p class="number">40</p>
+          </div>
+        </div>
+      </div>
+      <div class="box8">
+        <header>2018年度投资清单</header>
+        <div style="overflow-x: auto; width: 100%;height: 185px">
+          <table id="table" class="table table-bordered" data-url="data1.json">
+            <thead>
+              <tr>
+                <th rowspan="2" class="first">
+                  <span class="title1">万元</span><br />
+                  <span class="title2">百分比</span><br />
+                </th>
+                <th colspan="4" data-valign="middle" data-align="center">一季度</th>
+                <th colspan="4" data-valign="middle" data-align="center">二季度</th>
+                <th colspan="4" data-valign="middle" data-align="center">三季度</th>
+                <th colspan="4" data-valign="middle" data-align="center">四季度</th>
+              </tr>
+              <tr>
+                <th data-field="FirstQuarter" data-align="center">小计</th>
+                <th data-field="JanCount" data-align="center">一月</th>
+                <th data-field="FebCount" data-align="center">二月</th>
+                <th data-field="MarCount" data-align="center">三月</th>
+                <th data-field="SecondQuarter" data-align="center">小计</th>
+                <th data-field="AprCount" data-align="center">四月</th>
+                <th data-field="MayCount" data-align="center">五月</th>
+                <th data-field="JunCount" data-align="center">六月</th>
+                <th data-field="ThirdQuarter" data-align="center">小计</th>
+                <th data-field="JulCount" data-align="center">七月</th>
+                <th data-field="AguCount" data-align="center">八月</th>
+                <th data-field="SepCount" data-align="center">九月</th>
+                <th data-field="ForthQuarter" data-align="center">小计</th>
+                <th data-field="OctCount" data-align="center">十月</th>
+                <th data-field="NovCount" data-align="center">十一月</th>
+                <th data-field="DecCount" data-align="center">十二月</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>计划额</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+              </tr>
+              <tr>
+                <td>实际额</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+                <td>50768</td>
+              </tr>
+              <tr>
+                <td>完成比</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+                <td>50%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="box9">
+        <header>项目进度</header>
+        <div id="project"></div>
+      </div>
+    </div>
+    <!-- 右边箭头 -->
+    <div class="right_arrow_active" id="arrowRight"></div>
+    <script src="../../js/jQuery v3.3.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="../../js/echarts.js"></script>
+    <script src="./js/commission.js"></script>
+    <script>
+      $(function() {
+        //左侧箭头跳转评分排行榜
+        $('#arrowLeft').click(function() {
+          window.location.href = '../ranking-list/ranking-list.html';
+        });
+        //右侧箭头跳转评分排行榜
+        $('#arrowRight').click(function() {
+          window.location.href = '../details/details.html';
+        });
+        //返回主平台
+        $('.return').click(function() {
+          location.href = '../../index.html';
+        });
+      });
+    </script>
+  </body>
+</html>

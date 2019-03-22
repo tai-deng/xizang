@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+  <script src="js/avalon.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/data.min.js" type="text/javascript" charset="utf-8"></script>
+  <title>大数据</title>
+</head>
+
+<body ms-controller="ddata">
+  <!-- <div class="jump">
+			<a href="地域分析.html"><img src="img/jump.png"/></a>
+    </div> -->
+  <a href="../screen-display.html" style="text-decoration: none;">
+    <div class="head">
+      <h1>大数据</h1>
+      <p>{{calendar}}</p>
+    </div>
+    <div class="ddata">
+      <ul>
+        <li class="first">
+          <h2>2018年
+            <br/>项目总数</h2>
+          <h3>
+            <img src="img/ddata_listtb1.png">
+          </h3>
+          <h4>
+            <span id="time1">688</span>
+            <small>个</small>
+          </h4>
+          <dl>
+            <dd>政府投资
+              <span id="time1_1">433</span>个</dd>
+            <dd>民间投资
+              <span id="time1_2">102</span>个</dd>
+            <dd>招商引资
+              <span id="time1_3">97</span>个</dd>
+            <dd>受援项目
+              <span id="time1_4">56</span>个</dd>
+          </dl>
+        </li>
+        <li class="two">
+          <h2>开工数</h2>
+          <h3>
+            <img src="img/ddata_listtb2.png">
+          </h3>
+          <h4>
+            <span id="time2">471</span>
+            <small>个</small>
+          </h4>
+        </li>
+
+        <li class="three">
+          <h2>未开工</h2>
+          <h3>
+            <img src="img/ddata_listtb3.png">
+          </h3>
+          <h4>
+            <span id="time3">217</span>
+            <small>个</small>
+          </h4>
+
+        </li>
+        <li class="four">
+          <h2>开复工率</h2>
+          <h3>
+            <img src="img/ddata_listtb4.png">
+          </h3>
+          <h4>
+            <span id='time_bafen1'>68.5</span>
+            <small>%</small>
+          </h4>
+
+        </li>
+        <li class="two">
+          <h2>进度正常</h2>
+          <h3>
+            <img src="img/ddata_listtb5.png">
+          </h3>
+          <h4>
+            <span id="time4">306</span>
+            <small>个</small>
+          </h4>
+
+        </li>
+        <li class="three">
+          <h2>进度滞后</h2>
+          <h3>
+            <img src="img/ddata_listtb6.png">
+          </h3>
+          <h4>
+            <span id="time5">165</span>
+            <small>个</small>
+          </h4>
+
+        </li>
+        <li class="four">
+          <h2>进度正常率</h2>
+          <h3>
+            <img src="img/ddata_listtb7.png">
+          </h3>
+          <h4>
+            <span id="time_bafen2">64.9</span>
+            <small>%</small>
+          </h4>
+        </li>
+        <li class="five">
+          <h2>2018年
+            <br/>总投资额</h2>
+          <h3>
+            <img src="img/ddata_listtb8.png">
+          </h3>
+          <h4>
+            <span id="time6">9656050</span>
+            <small>万元</small>
+          </h4>
+        </li>
+        <li class="two">
+          <h2>2018年
+            <br/>计划投资额</h2>
+          <h3>
+            <img src="img/ddata_listtb9.png">
+          </h3>
+          <h4>
+            <span id="time7">9656050</span>
+            <small>万元</small>
+          </h4>
+        </li>
+        <li class="three">
+          <h2>2018年
+            <br/>当前完成投资额</h2>
+          <h3>
+            <img src="img/ddata_listtb10.png">
+          </h3>
+          <h4>
+            <span id="time8">9656050</span>
+            <small>万元</small>
+          </h4>
+        </li>
+        <li class="four">
+          <h2>2018年
+            <br/>当前完成投资比</h2>
+          <h3>
+            <img src="img/ddata_listtb11.png">
+          </h3>
+          <h4>
+            <span id="time_bafen3">8.51</span>
+            <small>%</small>
+          </h4>
+        </li>
+      </ul>
+    </div>
+  </a>
+  <script type="text/javascript">
+    dsj = true;
+  </script>
+</body>
+
+</html>

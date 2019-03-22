@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>前期评审弹窗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../../../js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content-title">
+                <div class="content-title-text">
+                    前期评审
+                </div>
+                <div class="del">
+                    <img src="./imgs/bad.png">
+                </div>
+            </div>
+            <div class="content-schedule">
+                <div class="schedule-top">
+                    <div class="schedule-top-title">
+                        xxx项目
+                    </div>
+                    <div class="schedule-top-tip">
+                        <div class="schedule-top-tip-l flex-align">
+                            <div class="schedule-top-tip-s color-border-w flex-m mr10">
+                                <i class="color-border-w"></i>
+                            </div>
+                            未完成
+                        </div>
+                        <div class="schedule-top-tip-c flex-align">
+                            <div class="schedule-top-tip-s color-border-b flex-m mr10">
+                                <i class="color-border-b"></i></div>
+                            已完成
+                        </div>
+                        <div class="schedule-top-tip-r flex-align">
+                            <div class="schedule-top-tip-s color-border-y flex-m mr10">
+                                <i class="color-border-y"></i></div>
+                            审核已驳回
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule-jd flex-m">
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m done-box">
+                            <i class="color-b-b done-box"></i>
+                        </div>
+                        <div class="origin-title done-text judge-sel">设计招标</div>
+                        <div class="origin-date">2018.02</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m">
+                            <i class="color-b-b"></i>
+                        </div>
+                        <div class="origin-title">编辑可研报告</div>
+                        <div class="origin-date">2018.03</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-y flex-m">
+                            <i class="color-b-y"></i>
+                        </div>
+                        <div class="origin-title">审查可行性报告并批复</div>
+                        <div class="origin-date">2018.04</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">编制初步设计及概算</div>
+                        <div class="origin-date"></div>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">审查初步设计及概算，并批复</div>
+                        <div class="origin-date"></div>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">施工、监理标准</div>
+                        <div class="origin-date"></div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">施工许可证办理</div>
+                        <div class="origin-date"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-schedule">
+                <div class="schedule-top pd6">
+                    <div class="schedule-top-tip">
+                        <div class="schedule-top-tip-l flex-align">
+                            <div class="schedule-top-tip-s color-border-w flex-m mr10">
+                                <i class="color-border-w"></i>
+                            </div>
+                            未完成
+                        </div>
+                        <div class="schedule-top-tip-c flex-align">
+                            <div class="schedule-top-tip-s color-border-b flex-m mr10">
+                                <i class="color-border-b"></i></div>
+                            已完成
+                        </div>
+                        <div class="schedule-top-tip-r flex-align">
+                            <div class="schedule-top-tip-s color-border-y flex-m mr10">
+                                <i class="color-border-y"></i></div>
+                            审核已驳回
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule-jd flex-m">
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m done-box">
+                            <i class="color-b-b done-box"></i>
+                        </div>
+                        <div class="origin-title done-text judge-sel">资料提交</div>
+                        <div class="origin-date">
+                            <div class="person">责任人:</div>
+                            <div class="name flex-m">阿旺</div>
+                            <div class="date flex-m">2018.02</div>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m">
+                            <i class="color-b-b"></i>
+                        </div>
+                        <div class="origin-title">市住建局审核</div>
+                        <div class="origin-date">
+                            <div class="name flex-m">白玛</div>
+                            <div class="date flex-m">2018.02</div>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-y flex-m">
+                            <i class="color-b-y"></i>
+                        </div>
+                        <div class="origin-title">资料完善</div>
+                        <div class="origin-date">
+                            <div class="name flex-m">次旦</div>
+                            <div class="date flex-m">2018.02</div>
+                        </div>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">完结审核</div>
+                        <div class="origin-date">
+                            <div class="name flex-m">梅朵</div>
+                            <div class="date flex-m"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-schedule height-ap ">
+                <div class="content-schedule-top flex-warp">
+                    <div class="file flex-column" onclick="openFile(1)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料1</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料2</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料3</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料1</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料2</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料3</div>
+                    </div>
+
+                </div>
+                <div class="content-schedule-top flex-warp">
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料1</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料2</div>
+                    </div>
+                    <div class="file flex-column" onclick="openFile(2)">
+                        <div class="file-icon">
+                            <img src="./imgs/file.png">
+                        </div>
+                        <div class="file-name">资料3</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var html = document.querySelector('html'),
+        rem = html.offsetWidth / 19.2;
+    html.style.fontSize = rem + 'px';
+    function openFile(p) {
+        window.alert('打开文件夹' + p)
+    }
+</script>
+<script src="../../../js/jQuery v3.3.1.min.js" type="text/javascript"></script>
+<script src="../../../js/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../plan/js/index.js" type="text/javascript"></script>
+
+</html>

@@ -1,0 +1,7 @@
+/*四模块公共样式*/
+.screen_display{padding: 0 0.2rem;}
+.head_title{background:rgba(40, 220, 143, 0.35);color: #ABCBFF;font-size: 0.24rem;height:0.47rem;line-height: 0.47rem;letter-spacing: 2px;text-align: center;}
+.sub_module{width: 49%;height:4.92rem;border: 2px solid #4574D6;}
+.horn{width: ;}
+/*各模块独立样式*/
+

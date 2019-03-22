@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+  <script src="js/avalon.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/data.min.js" type="text/javascript" charset="utf-8"></script>
+  <title>重点项目</title>
+</head>
+
+<body ms-controller="key_project" class="bodyn">
+  <!-- <div class="jump">
+			<a href="事项动态.html"><img src="img/jump.png"/></a>
+		</div> -->
+  <a href="../screen-display.html" style="text-decoration: none;">
+    <div class="head">
+      <h1>重点项目</h1>
+    </div>
+    <div class="key_project">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <colgroup>
+          <col width="135">
+          <col width="140">
+          <col width="500">
+          <col width="250">
+          <col width="205">
+          <col width="330">
+          <col>
+        </colgroup>
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>县名</th>
+            <th>项目名称</th>
+            <th style="text-align: left;padding-left:10px;">分管领导</th>
+            <th>开复工</th>
+            <th>2018年计划投资额</th>
+            <th>当前投资完成比率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ms-for="(k,v) in @list_data">
+            <td>{{v.xh}}</td>
+            <td>{{v.dq}}</td>
+            <td style="text-align: left;">
+              <span :if="v.xm.length<21">{{v.xm}}</span>
+              <marquee style="padding:0 30px;float: left;" scrolldelay="50" :if="v.xm.length>=21" direction="left" behavior="alternate">{{v.xm}}</marquee>
+
+            </td>
+            <td style="text-align: left;padding-left:10px;">{{v.fgld}}</td>
+            <td>{{v.kfg}}</td>
+            <td style="text-align:right;padding-right:90px;">{{v.tle}}万元</td>
+            <td>{{v.wczt}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </a>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>西藏项目</title>
+    <!-- 屏幕自适应 -->
+    <script type="text/javascript">
+        var html = document.querySelector('html'),
+          rem = html.offsetWidth / 19.2;
+        html.style.fontSize = rem + 'px';
+        localStorage.setItem('rem', rem)
+        console.log(`缓存rem:${rem}`)
+      </script>
+      <style>
+        p{
+          font-size:0.36rem;
+          line-height: 60px;
+        }
+      </style>
+</head>
+<body>
+   <p>1.根目录index.html为项目入口</p> 
+   <p>2.根目录的css,imgs,js,为公共样式，公共js,和公共资源</p> 
+   <p>3.各页面为私有目录</p> 
+   <p>4.已经下载好layui,bootstarp,jQuery</p> 
+   <p>5.bootstarp,jQuery分别有开发版本和生产版本，开发时用开发版本</p> 
+   <p>6.用rem代替px,100px == 1rem</p> 
+</body>
+</html>

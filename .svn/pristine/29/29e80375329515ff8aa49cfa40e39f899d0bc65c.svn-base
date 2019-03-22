@@ -1,0 +1,251 @@
+.container {
+    width: 19.2rem;
+    background: rgba(0, 0, 0, .58);
+    height: 10.8rem;
+    position: relative;
+}
+
+.content {
+    width: 12.8rem;
+    height: 8.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -6.4rem;
+    margin-top: -3.35rem;
+    text-align: center;
+    background: rgba(14, 63, 255, 0.24);
+    border: 2px solid rgba(69, 116, 214, 1);
+}
+
+.content-title {
+    height: 0.8rem;
+    background: rgba(11, 26, 82, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.24rem;
+    font-family: SourceHanSansCN-Medium;
+    font-weight: 500;
+    color: rgba(171, 203, 255, 1);
+}
+
+.content-title-text {}
+
+.del {
+    position: absolute;
+    right: 0.28rem;
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.del img{
+    width: 21px;
+    height: 21px;
+    display: block;
+}
+
+.content-form {
+    width: 11.66rem;
+    min-height: 4.86rem;
+    background: rgba(11, 26, 82);
+    opacity: 0.8;
+    margin-top: 0.52rem;
+    margin-left: 0.57rem;
+    font-size: 0.16rem;
+    font-family: SourceHanSansCN-Medium;
+    font-weight: 500;
+    color: rgba(254, 254, 254, 1);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.content-schedule {
+    width: 11.66rem;
+    height: 2rem;
+    background: rgba(69, 116, 214);
+    opacity: 0.8;
+    border: 2px solid rgba(60, 110, 218, .8);
+    margin: 0.08rem auto;
+    position: relative;
+}
+
+.schedule-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.18rem;
+    font-family: SourceHanSansCN-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.mr10 {
+    margin-right: 5px;
+}
+
+.pd6 {
+    padding: 6px;
+}
+
+.schedule-top-tip {
+    position: absolute;
+    top: 1px;
+    right: 0.65rem;
+    font-weight: 400;
+    display: flex;
+}
+
+.schedule-top-tip>div {
+    margin-left: 20px;
+}
+
+.schedule-top-tip-s {
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+
+.schedule-top-tip-s i {
+    width: 4px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+
+.color-border-w {
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+
+.color-border-b {
+    border-color: rgba(0, 252, 249, 1) !important;
+}
+
+.color-border-y {
+    border-color: rgba(243, 152, 0, 1) !important;
+}
+
+.color-b-w {
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.color-b-b {
+    background-color: rgba(0, 252, 249, 1) !important;
+}
+
+.color-b-y {
+    background-color: rgba(243, 152, 0, 1) !important;
+}
+
+.flex-m {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-align {
+    display: flex;
+    align-items: center;
+}
+
+/* 进度 */
+
+.schedule-jd {
+    height: 1.6rem;
+}
+
+.line {
+    width: 1.38rem;
+    background: rgba(0, 252, 249, 1);
+    border-top: 2px solid rgba(0, 252, 249, 1);
+}
+
+.origin {
+    position: relative;
+}
+
+.origin-title {
+    position: absolute;
+    bottom: 20px;
+    left: -30px;
+    width: 1rem;
+    font-size: 0.14rem;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(254, 254, 254, 1);
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.origin-date {
+    position: absolute;
+    top: 20px;
+    left: -30px;
+    width: .56rem;
+    font-size: 0.14rem;
+    font-family: SourceHanSansCN-Regular;
+    font-weight: 400;
+    color: rgba(254, 254, 254, 1);
+}
+
+.done-text {
+    transform: scale(1.2);
+    text-shadow: 0px 5px 7px rgba(3, 20, 89, 1)
+}
+
+.done-box {
+    transform: scale(1.2);
+    text-shadow: 0px 5px 7px rgba(3, 20, 89, 1)
+}
+
+.person {
+    position: absolute;
+    top: 0px;
+    left: -0.7rem;
+}
+
+.file {
+    font-size: 0.16rem;
+    font-family: SourceHanSansCN-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    margin: 5px;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-icon {}
+
+.file-icon img {
+    width: 0.9rem;
+    height: 0.74rem;
+    background: linear-gradient(-26deg, rgba(148, 255, 254, 0.72), rgba(69, 116, 214, 0.72));
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.flex-warp {
+    display: flex;
+    flex-wrap: wrap;
+}
+.height-ap{
+    height: 3.03rem !important;
+}

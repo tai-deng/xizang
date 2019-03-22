@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+  <script src="js/avalon.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/data.min.js" type="text/javascript" charset="utf-8"></script>
+  <title>项目详情</title>
+</head>
+
+<body ms-controller="project_details">
+  <!-- <div class="jump">
+			<a href="管理排行.html"><img src="img/jump.png"/></a>
+    </div> -->
+  <a href="../screen-display.html" style="text-decoration: none;">
+    <div class="head">
+      <h1>项目详情</h1>
+    </div>
+    <div class="project_details">
+      <div class="left">
+        <h2>{{page_data.biaoti}}</h2>
+        <h3>
+          <img ms-attr="{src:@page_data.xgimg}" />
+        </h3>
+        <h4>现场情况</h4>
+        <p>于2018-06-29 07:48:24 上传</p>
+        <ul>
+          <li>
+            <img ms-attr="{src:@page_data.listimg[0]}" />
+          </li>
+          <li>
+            <img ms-attr="{src:@page_data.listimg[1]}" />
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li class="hh">所属县域：{{page_data.list1}}</li>
+          <li class="hh">所属行业：{{page_data.list2}}</li>
+          <li class="hh">项目类型：{{page_data.list3}}</li>
+          <li class="hh">项目状态：{{page_data.list4}}</li>
+          <li>分管单位：{{page_data.list5}}</li>
+          <li>分管领导：{{page_data.list6}}</li>
+          <li>项目阶段： {{page_data.list7}}</li>
+          <li>项目开工时间：{{page_data.list8}}</li>
+          <li>项目拟建成时间：{{page_data.list9}}</li>
+          <li>设计单位：{{page_data.list10}}</li>
+          <li>施工单位：{{page_data.list11}}</li>
+          <li>监理单位：{{page_data.list12}}</li>
+          <li>建设规模：{{page_data.list13}}</li>
+        </ul>
+        <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>项目总投资额</td>
+            <td>{{page_data.list14}}万元</td>
+          </tr>
+          <tr>
+            <td>本年度计划完成投资额</td>
+            <td>{{page_data.list15}}万元</td>
+          </tr>
+          <tr>
+            <td>当前累计完成投资额</td>
+            <td>{{page_data.list16}}万元</td>
+          </tr>
+          <tr>
+            <td>当前完成投资额占比</td>
+            <td>{{page_data.list17}}%</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </a>
+</body>
+
+</html>

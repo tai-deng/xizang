@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="css/style.min.css" />
+  <script src="js/avalon.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/data.min.js" type="text/javascript" charset="utf-8"></script>
+  <title>事项动态</title>
+</head>
+
+<body ms-controller="event_dynamic" class="bodyn">
+  <!-- <div class="jump">
+			<a href="大数据.html"><img src="img/jump.png"/></a>
+    </div> -->
+  <a href="../screen-display.html" style="text-decoration: none;">
+    <div class="head">
+      <h1>事项动态</h1>
+    </div>
+    <div class="event_dynamic">
+      <table border="0" cellspacing="0" cellpadding="0">
+        <colgroup>
+          <col width="110">
+          <col width="140">
+          <col width="450">
+          <col width="230">
+          <col width="265">
+          <col width="180">
+          <col width="280">
+          <col width="260">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>县名</th>
+            <th>项目名称</th>
+            <th>项目阶段</th>
+            <th style="text-align:left;padding-left:20px;">事项内容</th>
+            <th style="text-align:left;padding-left:20px;">处理时间</th>
+            <th style="text-align:left;padding-left:50px;">事项状态</th>
+            <th style="text-align:left;padding-left:10px;">分管领导</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ms-for="(k,v) in @list_data">
+            <td>{{v.xh}}</td>
+            <td>{{v.dq}}</td>
+            <td style="text-align:left;">
+              <span :if="v.xm.length<15">{{v.xm}}</span>
+              <marquee style="padding:0 20px;" scrolldelay="50" :if="v.xm.length>=15" direction="left" behavior="alternate">{{v.xm}}</marquee>
+            </td>
+            <td>
+              <span :if='v.xmjd!=0'>{{v.xmjd}}</span>
+            </td>
+            <td style="text-align:left;padding-left:10px;" :class="[(@v.zt? '':'gules')]">{{v.sdnr}}</td>
+            <td style="text-align:left;padding-left:10px;">{{v.cltime}}</td>
+            <td style="text-align:left;padding-left:10px;">{{v.sdzt}}</td>
+            <td style="text-align:left;padding-left:10px;">{{v.fgld}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </a>
+</body>
+
+</html>

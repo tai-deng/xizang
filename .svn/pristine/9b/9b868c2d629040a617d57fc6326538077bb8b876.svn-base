@@ -1,0 +1,353 @@
+
+var xData = [
+  '乃东区(项目:113)',
+  '琼结县(项目:113)',
+  '扎囊县(项目:113)',
+  '贡嘎县(项目:113)',
+  '浪卡子县(项目:113)',
+  '洛扎县(项目:113)',
+  '措美县(项目:113)',
+  '错那县(项目:113)',
+  '隆子县(项目:113)',
+  '曲松县(项目:113)',
+  '加查县(项目:113)',
+  '曲松县(项目:113)'
+];
+// 项目进度
+var option = {
+  // backgroundColor: "#344b58",
+  //   title: {
+  //     text: '项目进度',
+  //     x: '4%',
+  //     textStyle: {
+  //           color: '#fff',fontSize: '14'
+  //       fontSize: '22'
+  //     }
+  //   },
+  // "tooltip": {
+  //     "trigger": "axis",
+  //     "axisPointer": {
+  //         "type": "shadow",
+  //         textStyle: {
+  //             color: "#fff"
+  //         }
+
+  //     },
+  // },
+  textStyle: {
+    //       color: '#fff',fontSize: '14'
+    fontSize: '14'
+  },
+  grid: {
+    borderWidth: 0,
+    top: 10,
+    bottom: 60,
+    left: 60,
+    right: 20,
+    textStyle: {
+      color: '#fff'
+    }
+  },
+  legend: {
+    x: 'center',
+    y: 'bottom',
+    textStyle: {
+      color: 'rgba(171, 203, 255, 1)',
+      fontSize: '14'
+    },
+    data: ['2017计划投资', '2017实际完成投资', '2018计划投资', '2018实际完成投资']
+  },
+
+  calculable: true,
+  xAxis: [
+    {
+      type: 'category',
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(171, 203, 255, 1)'
+        }
+      },
+      splitLine: {
+        show: false
+      },
+      axisTick: {
+        show: false
+      },
+      splitArea: {
+        show: false
+      },
+      axisLabel: {
+        interval: 0,
+        fontSize: '14'
+      },
+      data: xData
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      splitLine: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: 'rgba(171, 203, 255, 1)'
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      axisLabel: {
+        interval: 0,
+        fontSize: '14'
+      },
+      splitArea: {
+        show: false
+      },
+      splitNumber: 2 //坐标轴的分割段数
+    }
+  ],
+
+  series: [
+    {
+      name: '2017计划投资',
+      type: 'bar',
+      stack: '2017',
+      barMaxWidth: 28,
+      barGap: '10%',
+      itemStyle: {
+        normal: {
+          color: 'rgba(251, 142, 99, 1)',
+          label: {
+            show: true,
+            textStyle: {
+              color: '#fff',
+              fontSize: '14'
+            },
+            position: 'insideTop',
+            formatter: function(p) {
+              return p.value > 0 ? p.value : '';
+            }
+          }
+        }
+      },
+      data: [1709, 1917, 2455, 2610, 1719, 1433, 1544, 3285, 5208, 3372, 2484, 4078, 1222, 3333]
+    },
+    {
+      name: '2017实际完成投资',
+      type: 'bar',
+      stack: '2017',
+      itemStyle: {
+        normal: {
+          color: 'rgba(250, 200, 113, 1)',
+          barBorderRadius: 0,
+          label: {
+            show: true,
+            position: 'insideTop',
+            formatter: function(p) {
+              return p.value > 0 ? p.value : '';
+            }
+          }
+        }
+      },
+      data: [5327, 8876, 4507, 9200, 800, 5482, 6204, 7390, 9001, 8951, 8381, 9220, 3222, 4333]
+    },
+    {
+      name: '2018计划投资',
+      type: 'bar',
+      stack: '2018',
+      barMaxWidth: 28,
+      barGap: '10%',
+      itemStyle: {
+        normal: {
+          color: 'rgba(19, 90, 206, 1)',
+          label: {
+            show: true,
+            textStyle: {
+              color: '#fff',
+              fontSize: '14'
+            },
+            position: 'insideTop',
+            formatter: function(p) {
+              return p.value > 0 ? p.value : '';
+            }
+          }
+        }
+      },
+      data: [1709, 1917, 2455, 2610, 9719, 1433, 1544, 3285, 5208, 5372, 2484, 5078, 6222, 6333]
+    },
+    {
+      name: '2018实际完成投资',
+      type: 'bar',
+      stack: '2018',
+      itemStyle: {
+        normal: {
+          color: 'rgba(76, 161, 244, 1)',
+          barBorderRadius: 0,
+          label: {
+            show: true,
+            position: 'insideTop',
+            formatter: function(p) {
+              return p.value > 0 ? p.value : '';
+            }
+          }
+        }
+      },
+      data: [6327, 6776, 6507, 6200, 6800, 6482, 8204, 9990, 10901, 9519, 3891, 2920, 9222, 9333]
+    }
+  ]
+};
+echarts.init(document.getElementById('project'), null).setOption(option);
+// 项目类型分布
+
+var colors =['#00A1E4','#24C768','#E5CE10','#FF7E00','#FF0000']
+var dataStyle = {
+    normal: {
+        label: {show:false},
+        labelLine: {show:false},
+        // color: function(params){
+        //   return colors[params.dataIndex];
+        // }
+    }
+};
+var placeHolderStyle = {
+    normal : {
+        color: 'rgba(0,0,0,0)',
+        label: {show:false},
+        labelLine: {show:false}
+    },
+    emphasis : {
+        color: 'rgba(0,0,0,0)'
+    }
+};
+var typeOption1 = {
+  // hoverAnimation :false,
+  // hoverOffset:0,
+    title: {
+        // text: '你幸福吗？',
+        // subtext: 'From ExcelHome',
+        // sublink: 'http://e.weibo.com/1341556070/AhQXtjbqh',
+        x: 'center',
+        y: 'center',
+        itemGap: 5,
+        textStyle : {
+            color : 'rgba(30,144,255,0.8)',
+            fontFamily : '微软雅黑',
+            fontSize : 16,
+            // fontWeight : 'bolder'
+        }
+    },
+    tooltip : {
+        show: true,
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    // legend: {
+    //     orient : 'vertical',
+    //     // x : document.getElementById('main').offsetWidth / 2,
+    //     // y : 45,
+    //     itemGap:6,
+    //     data:['68%的人表示过的不错','29%的人表示生活压力很大','3%的人表示“我姓曾”']
+    // },
+    // toolbox: {
+    //     show : true,
+    //     feature : {
+    //         mark : {show: true},
+    //         dataView : {show: true, readOnly: false},
+    //         restore : {show: true},
+    //         saveAsImage : {show: true}
+    //     }
+    // },
+    series : [
+        {
+            name:'1',
+            type:'pie',
+            clockWise:false,
+            radius : [61, 69],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:68,
+                    name:'68%的人表示过的不错'
+                },
+                {
+                    value:32,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'2',
+            type:'pie',
+            clockWise:false,
+            radius : [53, 61],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:29, 
+                    name:'29%的人表示生活压力很大'
+                },
+                {
+                    value:71,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'3',
+            type:'pie',
+            clockWise:false,
+            radius : [45, 53],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:63, 
+                    name:'3%的人表示“我姓曾”'
+                },
+                {
+                    value:37,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },       {
+            name:'4',
+            type:'pie',
+            clockWise:false,
+            radius : [37, 45],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:29, 
+                    name:'29%的人表示生活压力很大'
+                },
+                {
+                    value:71,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        },
+        {
+            name:'3',
+            type:'pie',
+            clockWise:false,
+            radius : [29, 37],
+            itemStyle : dataStyle,
+            data:[
+                {
+                    value:49, 
+                    name:'3%的人表示“我姓曾”'
+                },
+                {
+                    value:51,
+                    name:'invisible',
+                    itemStyle : placeHolderStyle
+                }
+            ]
+        }
+    ]
+};
+echarts.init(document.getElementById('type1'), null).setOption(typeOption1);
+echarts.init(document.getElementById('type2'), null).setOption(typeOption1);

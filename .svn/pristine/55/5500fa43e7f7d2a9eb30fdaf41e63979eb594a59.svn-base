@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>山南市建设项目发改委管理平台-项目详情</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="./css/details_popup.css">
+    <link rel="stylesheet" href="../../js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script type="text/javascript">
+        var html = document.querySelector('html'),
+            rem = html.offsetWidth / 19.2;
+        html.style.fontSize = rem + 'px';
+        localStorage.setItem('rem', rem)
+        console.log(`缓存rem:${rem}`)
+    </script>
+    <script src="../../js/jQuery v3.3.1.min.js"></script>
+    <script src="js/details.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="return">返回主平台</div>
+        <div class="header_title">
+            <span>山南市发改委管理平台</span>
+        </div>
+        <div class="header_content">
+            <span class="date">2019年1月1日 09:01:02</span>
+        </div>
+    </div>
+    <!-- 山南市建设项目发改委管理平台-项目详情 -->
+    <div class="details_main_body">
+        <!-- 左边箭头 -->
+        <div class="left_arrow_active" id="arrowLeft"></div>
+        <div class="details_main">
+            <div class="details_main_left">
+                <div class="details_main_left_up">
+                    <div class="details_main_left_title">
+                        <select class="details_select_left" name="region" id="details_region">
+                            <option value="10">隆子县</option>
+                        </select>
+                        <select class="details_select_right" name="region" id="details_progress">
+                            <option value="100">隆子县玉麦乡边境旅游小环线基础设施工程</option>
+                        </select>
+                    </div>
+                    <div class="details_main_left_echart">
+
+                    </div>
+                    <div class="details_main_left_building">
+                        <div class="details_main_left_building_head">
+                            <p>工程管理 <span class="details_main_left_head_list"> <i>拟开工</i> <i>社会发展</i> </span>
+                                <!--拟开工/社会发展--动态生成的数据---->
+                                <span class="details_main_left_head_right">各板块更新频率爆灯 <img class="details_main_left_head_img"
+                                        src="../../imgs/red_light.png" alt=""> </span> </p>
+                        </div>
+                        <div class="details_main_left_building_body">
+                            <ul>
+                                <li class="details_display_left_li">总投资： <span>300000万元</span> </li>
+                                <li class="details_display_right_li">项目地址： <span>山南市隆子县玉麦乡</span> </li>
+                                <li class="details_display_left_li">建设单位： <span>山南城市建筑投资公司</span> </li>
+                                <li class="details_display_right_li">设计单位： <span>湖南省建筑科学研究院</span> </li>
+                                <li class="details_display_left_li">施工单位： <span>湖南建工集团有限公司</span> </li>
+                                <li class="details_display_right_li">分管领导： <span>李小龙</span> </li>
+                                <li class="details_display_left_li">建设单位： <span>四川兢业</span> </li>
+                                <li class="details_display_right_li">责任单位： <span>旅发委</span> </li>
+                                <li class="details_display_all_li">计划竣工时间： <span>2019.12.12</span> </li>
+                                <li class="details_display_all_li">建设内容及规模： <span>总建筑面积1470平方米，以及附属设施建设总建筑面积1470平方米，
+                                        以及附属设施建设总建筑面积1470平方米，以及附属设施建设总建筑面积1470平方米
+                                        以及附属设施建设总建筑面积1470平方米，以及附属设施建设总建筑面积1470平方米
+                                        以及附属设施建设总建筑面积1470平方米，以及附属设施建设总建筑面积1470平方米
+                                    </span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="details_main_left_foot">
+                    <span>项目责任人：蒋劲</span><span class='details_main_foot_right'>联系方式：13888888888</span>
+                </div>
+            </div>
+            <div class="details_main_right">
+                <div class="details_main_right1">
+                    <div class="right1_div_left">
+                        <p>总投资额（万元）</p>
+                    </div>
+                    <div class="right1_div_right">
+                        <p>项目状态</p>
+                    </div>
+                    <div class="right1_div_left right1_div_height">
+                        <p class="right1_largerText">30000</p>
+                    </div>
+                    <div class="right1_div_right right1_noPadding right1_div_height">
+                        <div class="right1_div_right_padding">
+                            <p>建设中</p>
+                            <p>开工日期：2018.01.01</p>
+                        </div>
+                        <div>
+                            <p>进度正常： <span class="white_text_right1">20%</span> </p>
+                            <p>环保评分： <span class="white_text_right1">100</span> </p>
+                            <p>社会稳定评分： <span class="white_text_right1">100</span> </p>
+                        </div>
+                    </div>
+                    <div class="right1_div_left">
+                        <p>2018年计划投资额（万元）</p>
+                    </div>
+                    <div class="right1_div_right">
+                        <p>截止2017年计划投资额（万元）</p>
+                    </div>
+                    <div class="right1_div_left right1_div_left_height">
+                        <div> <span class="right1_largerText">700</span></div>
+                        <div>
+                            <p>当前完成额度： <span class="white_text_right1">100</span> </p>
+                            <p>占本年投资额： <span class="white_text_right1">14.0%</span> </p>
+                        </div>
+                    </div>
+                    <div class="right1_div_right right1_div_left_height padding_top_p_right1">
+                        <p class="right1_largerText">0</p>
+                    </div>
+                </div>
+                <div class="details_main_right2">
+                    <div class="details_main_right2_head">
+                        <span>2018年度投资清单</span>
+                    </div>
+                    <div class="details_main_right2_table">
+                        <table class=" details_table">
+                            <thead>
+                                <tr>
+                                    <td rowspan="2" class="details_first_td">万元/百分比</td>
+                                    <td colspan="4">一季度</td>
+                                    <td colspan="4">二季度</td>
+                                    <td colspan="4">三季度</td>
+                                    <td colspan="4">四季度</td>
+                                </tr>
+                                <tr>
+                                    <td>小计</td>
+                                    <td>一月</td>
+                                    <td>二月</td>
+                                    <td>三月</td>
+                                    <td>小计</td>
+                                    <td>一月</td>
+                                    <td>二月</td>
+                                    <td>三月</td>
+                                    <td>小计</td>
+                                    <td>一月</td>
+                                    <td>二月</td>
+                                    <td>三月</td>
+                                    <td>小计</td>
+                                    <td>一月</td>
+                                    <td>二月</td>
+                                    <td>三月</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>计划额</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                </tr>
+                                <tr>
+                                    <td>实际额</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                    <td>50768</td>
+                                    <td>29768</td>
+                                    <td>11000</td>
+                                    <td>33000</td>
+                                </tr>
+                                <tr>
+                                    <td>完成比</td>
+                                    <td>50%</td>
+                                    <td>40.11%</td>
+                                    <td>16.52%</td>
+                                    <td>20.49%</td>
+                                    <td>50%</td>
+                                    <td>40.11%</td>
+                                    <td>16.52%</td>
+                                    <td>20.49%</td>
+                                    <td>50%</td>
+                                    <td>40.11%</td>
+                                    <td>16.52%</td>
+                                    <td>20.49%</td>
+                                    <td>50%</td>
+                                    <td>40.11%</td>
+                                    <td>16.52%</td>
+                                    <td>20.49%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="details_main_right3">
+                    <div class="details_main_right2_head">
+                        <p>项目进度
+                            <span class="details_main_right2_head_right">各板块更新频率爆灯 <img class="details_main_left_head_img"
+                                    src="../../imgs/red_light.png" alt=""></span>
+                        </p>
+                    </div>
+                    <div class='details_main_right3_body'>
+                        <p class="details_right3_p"> <span class="details_right3_span">70%</span> </p>
+                        <div class="details_right3_div">
+                            <span>开工时间 <br />2018.06.06</span>
+                        </div>
+                        <div>
+                            <span>计划竣工时间 <br />2020.06.06</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="details_main_right4">
+                    <div class="details_main_right4_head">
+                        <p>项目资料库
+                            <span class="details_main_right2_head_right">各板块更新频率爆灯 <img class="details_main_left_head_img"
+                                    src="../../imgs/red_light.png" alt=""></span>
+                        </p>
+                    </div>
+                    <div class="details_main_right4_body">
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="../../imgs/folder_big.png" alt="">
+                                    <p>资料1</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="../../imgs/folder_big.png" alt="">
+                                    <p>资料1</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边箭头 -->
+            <div class="right_arrow_active" id="arrowRight"></div>
+        </div>
+    </div>
+    <div class="container hidden">
+        <div class="content">
+            <div class="content-title">
+                <div class="content-title-text">
+                    前期评审
+                </div>
+                <div class="del">
+                    <img src="./imgs/close.png">
+                </div>
+            </div>
+            <div class="content-schedule">
+                <div class="schedule-top">
+                    <div class="schedule-top-title">
+                        xxx项目
+                    </div>
+                    <div class="schedule-top-tip">
+                        <div class="schedule-top-tip-l flex-align">
+                            <div class="schedule-top-tip-s color-border-w flex-m mr10">
+                                <i class="color-border-w"></i>
+                            </div>
+                            未完成
+                        </div>
+                        <div class="schedule-top-tip-c flex-align">
+                            <div class="schedule-top-tip-s color-border-b flex-m mr10">
+                                <i class="color-border-b"></i></div>
+                            已完成
+                        </div>
+                        <div class="schedule-top-tip-r flex-align">
+                            <div class="schedule-top-tip-s color-border-y flex-m mr10">
+                                <i class="color-border-y"></i></div>
+                            审核已驳回
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule-jd flex-m">
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m done-box">
+                            <i class="color-b-b done-box"></i>
+                        </div>
+                        <div class="origin-title done-text">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m">
+                            <i class="color-b-b"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-y flex-m">
+                            <i class="color-b-y"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">2018.08</div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-schedule">
+                <div class="schedule-top pd6">
+                    <div class="schedule-top-tip">
+                        <div class="schedule-top-tip-l flex-align">
+                            <div class="schedule-top-tip-s color-border-w flex-m mr10">
+                                <i class="color-border-w"></i>
+                            </div>
+                            未完成
+                        </div>
+                        <div class="schedule-top-tip-c flex-align">
+                            <div class="schedule-top-tip-s color-border-b flex-m mr10">
+                                <i class="color-border-b"></i></div>
+                            已完成
+                        </div>
+                        <div class="schedule-top-tip-r flex-align">
+                            <div class="schedule-top-tip-s color-border-y flex-m mr10">
+                                <i class="color-border-y"></i></div>
+                            审核已驳回
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule-jd flex-m">
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m done-box">
+                            <i class="color-b-b done-box"></i>
+                        </div>
+                        <div class="origin-title done-text">设计招标</div>
+                        <div class="origin-date">
+                            <div class="person">责任人:</div>
+                            <div class="name flex-m">阿旺</div>
+                            <div class="date flex-m">2018.08</div>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-b flex-m">
+                            <i class="color-b-b"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">
+                            <div class="name flex-m">阿旺</div>
+                            <div class="date flex-m">2018.08</div>
+                        </div>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-y flex-m">
+                            <i class="color-b-y"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">
+                            <div class="name flex-m">阿旺</div>
+                            <div class="date flex-m">2018.08</div>
+                        </div>
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="origin">
+                        <div class="schedule-top-tip-s color-border-w flex-m">
+                            <i class="color-b-w"></i>
+                        </div>
+                        <div class="origin-title">设计招标</div>
+                        <div class="origin-date">
+                            <div class="name flex-m">阿旺</div>
+                            <div class="date flex-m"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-schedule height-ap flex-warp">
+                <div class="file flex-column" onclick="openFile(1)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料1</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+                <div class="file flex-column" onclick="openFile(2)">
+                    <div class="file-icon">
+                        <img src="./imgs/file.png">
+                    </div>
+                    <div class="file-name">资料2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

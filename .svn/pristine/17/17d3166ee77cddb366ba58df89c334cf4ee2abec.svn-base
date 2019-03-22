@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="css/ranking-list.css" />
+    <link rel="stylesheet" href="../../js/layui-v2.4.5/layui/css/layui.css" />
+    <title>工作状态</title>
+    <!-- 屏幕自适应 -->
+    <script type="text/javascript">
+      var html = document.querySelector("html"),
+        rem = html.offsetWidth / 19.2;
+      html.style.fontSize = rem + "px";
+      localStorage.setItem("rem", rem);
+      console.log(`缓存rem:${rem}`);
+    </script>
+    <style>
+      p {
+        font-size: 0.36rem;
+        line-height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header>
+      <div class="return">返回主平台</div>
+      <div class="header_title">山南市发改委管理平台</div>
+      <div class="platform">环保局平台</div>
+      <p>2019年1月1日 09:01:02</p>
+    </header>
+    <!-- 表格 -->
+    <div class="conent">
+      <!-- 左边箭头 -->
+      <div class="left_arrow_active" id="arrowLeft"></div>
+      <!-- 中间表格 -->
+      <!-- 表格一 -->
+      <div class="table1">
+        <div class="table1_head">
+          评分排行榜
+        </div>
+        <ul class="table1_list">
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>排行</li>
+              <li>项目名称</li>
+              <li>项目地址</li>
+              <li>业主单位</li>
+              <li>建设内容及规模</li>
+              <li>建设性质</li>
+              <li>总投资额(万元)</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li><span class="first"></span></li>
+              <li>大古水电站</li>
+              <li>桑日县</li>
+              <li>国家所有</li>
+              <li>装机66万千瓦</li>
+              <li>交通能源/续建复工</li>
+              <li>1220000</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li><span class="second"></span></li>
+              <li id="font_size">
+                G219线措美县古堆乡至朗县金东乡段 新改建工程(隆子段)
+              </li>
+              <li>隆子县</li>
+              <li>国家所有</li>
+              <li id="font_size">隆子县境内，主线225公里及附属设施</li>
+              <li>交通能源/续建复工</li>
+              <li>254300</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li><span class="third"></span></li>
+              <li>
+                贡嘎县昌果乡高海报生态搬迁点
+              </li>
+              <li>贡嘎县</li>
+              <li>国家所有</li>
+              <li>高海报生态搬迁建设点</li>
+              <li>农牧林水/续建复工</li>
+              <li>22803</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>4</li>
+              <li>
+                乃东社区棚户区改造项目
+              </li>
+              <li>乃东区</li>
+              <li>国家所有</li>
+              <li id="font_size">
+                新建354套安置房及商业楼及附属配套工程
+              </li>
+              <li>农牧林水/续建复工</li>
+              <li>28034</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>5</li>
+              <li>
+                山南市流浪狗收容中心
+              </li>
+              <li>乃东区</li>
+              <li>国家所有</li>
+              <li id="font_size">
+                总建筑面积17670平方米，以及附属设施建设
+              </li>
+              <li>社会稳定/新建</li>
+              <li>7400</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>6</li>
+              <li id="font_size">
+                桑日县白堆乡2017年农业综合开发项目
+              </li>
+              <li>桑日县</li>
+              <li>国家所有</li>
+              <li id="font_size">
+                高标农田、生态综合治理、产业化发展
+              </li>
+              <li>社会稳定/新建</li>
+              <li>1540</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>7</li>
+              <li>
+                错那县勒乡防洪堤
+              </li>
+              <li>错那县</li>
+              <li>国家所有</li>
+              <li>
+                防洪工程建设
+              </li>
+              <li>农牧林水/续建待复工</li>
+              <li>1343</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>8</li>
+              <li>
+                乃东区泽当镇人民法庭
+              </li>
+              <li>乃东区</li>
+              <li>国家所有</li>
+              <li id="font_size">
+                总建筑面积720平方木，以及附属设施建设
+              </li>
+              <li>市政稳定/新建</li>
+              <li>240</li>
+            </ul>
+          </li>
+          <li class="table1_tr">
+            <ul class="table1_td">
+              <li>9</li>
+              <li>
+                浪卡子县普玛江塘乡人民法庭
+              </li>
+              <li>浪卡子县</li>
+              <li>国家所有</li>
+              <li id="font_size">
+                总建筑面积720平方木，以及附属设施建设
+              </li>
+              <li>市政稳定/新建</li>
+              <li>200</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 页脚 -->
+        <div>
+          <ul class="table1_footer">
+            <li>总投资额</li>
+            <li>|</li>
+            <li>截止上2017年度累计投资额</li>
+            <li>|</li>
+            <li>2018年度计划投资额</li>
+            <li>|</li>
+            <li>本年度分季度投资额</li>
+            <li>|</li>
+            <li>进度完成情况</li>
+            <li>|</li>
+            <li>计划竣工时间</li>
+          </ul>
+        </div>
+      </div>
+      <!-- 表格二 -->
+      <div class="table2">
+        <div class="table2_head">
+          工作状态
+        </div>
+        <ul class="table2_list">
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>序号</li>
+              <li>项目</li>
+              <li>事项</li>
+              <li>节点流程</li>
+              <li>状态</li>
+              <li>经办单位</li>
+              <li>操作时间</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>1</li>
+              <li>贡嘎县克西乡防洪工程</li>
+              <li>用地评审</li>
+              <li>前期评审</li>
+              <li>已完成</li>
+              <li>发改委</li>
+              <li>2018.5.5</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>2</li>
+              <li>
+                扎囊县人工种草与天然草场改良
+              </li>
+              <li>施工合同签订</li>
+              <li>前期评审</li>
+              <li>进行中</li>
+              <li>发改委</li>
+              <li>2018.5.5</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>3</li>
+              <li>
+                贡嘎县农作物病虫疫情区域应急防治中心
+              </li>
+              <li>本月投资款发放</li>
+              <li>建设实施</li>
+              <li>进行中</li>
+              <li>发改委</li>
+              <li>2018.5.5</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>4</li>
+              <li>
+                乃东社区棚户区改造项目
+              </li>
+              <li>社会稳定风险评估</li>
+              <li>前期评审</li>
+              <li>
+                进行中
+              </li>
+              <li>发改委</li>
+              <li>2018.5.5</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>5</li>
+              <li>
+                错那县贡日乡斯木边境小康村
+              </li>
+              <li>终验通过</li>
+              <li>竣工验收</li>
+              <li>
+                已完成
+              </li>
+              <li>发改委</li>
+              <li>2018.5.5</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>6</li>
+              <li>
+                隆子县藏医院
+              </li>
+              <li>占用林地审批</li>
+              <li>前期评审</li>
+              <li>
+                已完成
+              </li>
+              <li>发改委</li>
+              <li>2018.5.5</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>7</li>
+              <li>
+                隆子县未成年人保护中心建设项目
+              </li>
+              <li>建设进度检查</li>
+              <li>建设实施</li>
+              <li>
+                进行中
+              </li>
+              <li>发改委</li>
+              <li>2018.03.28</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>8</li>
+              <li>
+                隆子县五保集中供养服务中心维修改造
+              </li>
+              <li>竣工决算审查</li>
+              <li>竣工验收</li>
+              <li>
+                已完成
+              </li>
+              <li>发改委</li>
+              <li>2018.03.15</li>
+            </ul>
+          </li>
+          <li class="table2_tr">
+            <ul class="table2_td">
+              <li>9</li>
+              <li>
+                贡嘎县昌果乡防洪提工程
+              </li>
+              <li>2018年3月资金拨付</li>
+              <li>建设实施</li>
+              <li>
+                已完成
+              </li>
+              <li>发改委</li>
+              <li>2018.03.10</li>
+            </ul>
+          </li>
+        </ul>
+        <!-- 页脚 -->
+        <div class="table2_footer">
+          <input
+            type="text"
+            class="layui-input"
+            id="test1"
+            placeholder="2019-02-01"
+          />
+          <em>——</em>
+          <input
+            type="text"
+            class="layui-input"
+            id="test2"
+            placeholder="2019-03-16"
+          />
+          <span></span>
+        </div>
+      </div>
+      <!-- 右边箭头 -->
+      <div class="right_arrow_active" id="arrowRight"></div>
+    </div>
+  </body>
+  <script src="../../js/layui-v2.4.5/layui/layui.js"></script>
+  <script src="../../js/jQuery v3.3.1.min.js"></script>
+  <script>
+    layui.use("laydate", function() {
+      var laydate = layui.laydate;
+
+      //执行一个laydate实例
+      laydate.render({
+        elem: "#test1" //指定元素
+      });
+      //执行一个laydate实例
+      laydate.render({
+        elem: "#test2" //指定元素
+      });
+    });
+    $(document).ready(function() {
+      $('.table2').show()
+      $('.table1').hide()
+    //    var page=1;//当前所在第一页
+    //    $('#arrowLeft').click(function(){
+    //        if(page==2){//上一页
+    //        $('.table1').show()
+    //        $('.table2').hide()
+    //        $("#arrowLeft").attr("class","left_arrow");
+    //        $("#arrowRight").attr("class","right_arrow_active");
+    //        page=1
+    //        }
+    //    })
+    // //    下一页
+    //     $('#arrowRight').click(function(){
+    //        if(page==1){//上一页
+    //        $('.table2').show()
+    //        $('.table1').hide()
+    //        $("#arrowLeft").attr("class","left_arrow_active");
+    //        $("#arrowRight").attr("class","right_arrow");
+    //        page=2
+    //        }
+    //    })
+       //返回主平台
+       $('.return').click(function(){
+        location.href='../../index.html';
+       })
+       //左侧箭头
+       $('#arrowLeft').click(function(){
+        location.href='./ranking-list_two.html';
+       })
+       //右侧箭头
+       $('#arrowRight').click(function(){
+        location.href='../commission/commission.html';
+       })
+       //环保局平台
+       $('.platform').click(function(){
+        location.href='#';
+       })
+    });
+  </script>
+</html>
