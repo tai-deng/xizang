@@ -1,0 +1,92 @@
+body {
+  margin: 0 auto;
+}
+
+.screen-display {
+  width: 100%;
+  background: url('../../../imgs/bg.png') no-repeat;
+  background-size: cover;
+}
+
+.screen-display header {
+  width: 100%;
+  max-width: 19.2rem;
+}
+
+.screen-display header p {
+  float: right;
+  margin-right: .2rem;
+}
+
+.screen-display .screen-display-context {
+  padding: .57rem .2rem 0;
+}
+
+.screen-display .screen-display-context .item-card {
+  max-width: 9.17rem;
+  height: 4.93rem;
+  color: #fff;
+  border: 1px solid RGBA(69, 116, 214, 1);
+  margin-bottom: .2rem;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  float: left;
+}
+
+.screen-display .screen-display-context .item-card .item-card-head {
+  width: 100%;
+  height: .47rem;
+  line-height: .47rem;
+  background: RGBA(13, 45, 139, 1);
+  opacity: 0.8;
+  text-align: center;
+  font-size: .24rem;
+  color: rgba(171, 203, 255, 1);
+}
+
+.screen-display .screen-display-context .item-card .bg img {
+  width: 100%;
+  height: 4.43rem;
+}
+
+.screen-display .screen-display-context .row {
+  margin: 0;
+}
+
+.margin-r {
+  margin-right: .2rem;
+}
+
+/* 边角 */
+
+i {
+  position: absolute;
+  padding: 0.05rem;
+  border-style: solid;
+  border-color: #00FCF9;
+}
+
+.row1 {
+  border-width: 2px 0 0 2px;
+  top: -0.025rem;
+  left: -0.025rem;
+}
+
+.row2 {
+  border-width: 2px 2px 0 0;
+  top: -0.025rem;
+  right: -0.025rem;
+}
+
+.col1 {
+  border-width: 0 0 2px 2px;
+  bottom: -0.025rem;
+  left: -0.025rem;
+}
+
+.col2 {
+  border-width: 0 2px 2px 0;
+  bottom: -0.025rem;
+  right: -0.025rem;
+}

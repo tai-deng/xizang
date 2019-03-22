@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/longzixian.css">
+  <link rel="stylesheet" href="./css/index_popup.css">
+  <link rel="stylesheet" href="./js/layui-v2.4.5/layui/css/layui.css">
+  <link rel="stylesheet" href="./js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <script src="./js/jQuery v3.3.1.min.js"></script>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/layui-v2.4.5/layui/layui.js"></script>
+  <!-- <script src="./js/index.js"></script> -->
+  <script src="./js/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+  
+  <!-- <script src="js/provins.js" type="text/javascript" charset="utf-8"></script> -->
+  <title>西藏项目</title>
+  <!-- 屏幕自适应 -->
+  <script type="text/javascript">
+    var html = document.querySelector('html'),
+      rem = html.offsetWidth / 19.2;
+    html.style.fontSize = rem + 'px';
+    localStorage.setItem('rem', rem)
+    console.log(`缓存rem:${rem}`)
+  </script>
+  <script>
+    //注意进度条依赖 element 模块，否则无法进行正常渲染和功能性操作
+    layui.use('element', function () {
+      var element = layui.element;
+    });
+    $(function () {
+      //跳转到发改委平台
+      $('.return').click(function () {
+        window.location.href = "./index.html"
+      });
+      //跳转到大屏
+      $('.exhibition').click(function () {
+        window.location.href = "./pages/screen-display/screen-display.html"
+      });
+      //跳转到发改委平台
+      $('.platform').click(function () {
+        window.location.href = "./pages/commission/commission.html"
+      });
+      //点击显示弹窗
+      $('.index_content_right').click(function() {
+        $('.container').removeClass('hidden')
+        $('.container').addClass('show')
+      })
+      //点击关闭弹窗
+      $('.del').click(function(){
+        $('.container').removeClass('show')
+        $('.container').addClass('hidden')
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <div class="header">
+    <div class="return">返回</div>
+    <div class="header_title">
+      <span>山南市建设项目综合管理平台驾驶舱</span>
+    </div>
+    <div class="header_content">
+      <span class="exhibition active">大屏展示</span>
+      <span class="platform">二级平台</span>
+      <span class="date">2019年1月1日 09:01:02</span>
+    </div>
+  </div>
+  <div class="index_content">
+    <!-- 主体左侧 -->
+    <div class="index_content_left">
+      <div class="engineering_management">
+        <div class="engineering_management_title">工程管理</div>
+        <div id="mychart_pie_one"></div>
+        <div id="mychart_pie_two"></div>
+        <div class="engineering_management_describe">2018年投资总项目个数233个</div>
+        <i class="row row1"></i>
+        <i class="row row2"></i>
+        <i class="col col2"></i>
+        <i class="col col1"></i>
+      </div>
+      <div class="ranking_list">
+        <div class="ranking_list_title">
+          <span class="items_num active">项目个数</span>
+          <span class="investment_situation">投资情况</span>
+          <span class="ranking">排行榜</span>
+        </div>
+        <div class="ranking_list_content">
+          <table>
+            <tr>
+              <td class="ranking_number">排名</td>
+              <td class="county">乡名</td>
+              <td class="project_num">项目个数</td>
+              <td class="number"></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>日塘镇</td>
+              <td>
+                <div class="layui-progress layui-progress-big">
+                  <div class="layui-progress-bar layui-bg-blue gradients_one" lay-percent="70%"></div>
+                </div>
+              </td>
+              <td>113个</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>列麦乡</td>
+              <td>
+                <div class="layui-progress layui-progress-big">
+                  <div class="layui-progress-bar layui-bg-orange gradients_two" lay-percent="60%"></div>
+                </div>
+              </td>
+              <td>80个</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>加玉乡</td>
+              <td>
+                <div class="layui-progress layui-progress-big">
+                  <div class="layui-progress-bar layui-bg-blue gradients_one" lay-percent="50%"></div>
+                </div>
+              </td>
+              <td>46个</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>扎日乡</td>
+              <td>
+                <div class="layui-progress layui-progress-big">
+                  <div class="layui-progress-bar layui-bg-orange gradients_two" lay-percent="40%"></div>
+                </div>
+              </td>
+              <td>29个</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>玉麦乡</td>
+              <td>
+                <div class="layui-progress layui-progress-big">
+                  <div class="layui-progress-bar layui-bg-blue gradients_one" lay-percent="30%"></div>
+                </div>
+              </td>
+              <td>12个</td>
+            </tr>
+          </table>
+        </div>
+        <i class="row row1"></i>
+        <i class="row row2"></i>
+        <i class="col col2"></i>
+        <i class="col col1"></i>
+      </div>
+    </div>
+    <!-- 主体中间 -->
+    <div class="index_content_center">
+      <div class="map_display">
+        <div class="map_title">地图展示</div>
+        <!-- <div id='mychart_map'></div> -->
+        <div class='mychart_map'></div>
+        <span class="dingwei00 hidden">隆子县玉麦乡边境旅游小环线基础设施、服务设施建设项目</span>
+        <img src='./imgs/dingwei.png' class='dingwei0'>
+        <span class="dingwei11 hidden">隆子县产业扶贫建设项目</span>
+        <img src='./imgs/dingwei.png' class='dingwei1'>
+        <span class="dingwei22 hidden">隆子县灌区维修养护</span>
+        <img src='./imgs/dingwei.png' class='dingwei2'>
+        <span class="dingwei33 hidden">隆子县妇幼保健站</span>
+        <img src='./imgs/dingwei.png' class='dingwei3'>
+        <span class="dingwei44 hidden">隆子县人民法院诉讼服务中心</span>
+        <img src='./imgs/dingwei.png' class='dingwei4'>
+        <span class="dingwei55 hidden">隆子县奶牛养殖基地建设项目</span>
+        <img src='./imgs/dingwei.png' class='dingwei5'>
+        <span class="dingwei66 hidden">隆子县边境小康村建设</span>
+        <img src='./imgs/dingwei.png' class='dingwei6'>
+        <span class="dingwei77 hidden">隆子县2018年度农业综合开发项目</span>
+        <img src='./imgs/dingwei.png' class='dingwei7'>
+        <img src='./imgs/dingwei.png' class='dingwei8'>
+        <img src='./imgs/dingwei.png' class='dingwei9'>
+        <img src='./imgs/dingwei.png' class='dingwei10'>
+        <img src='./imgs/dingwei.png' class='dingwei1-1'>
+        <img src='./imgs/dingwei.png' class='dingwei1-2'>
+      </div>
+      <i class="row row1"></i>
+      <i class="row row2"></i>
+      <i class="col col2"></i>
+      <i class="col col1"></i>
+    </div>
+    <!-- 主体右侧 -->
+    <div class="index_content_right">
+      <div class="investment_management">
+        <div class="investment_management_title">投资管理</div>
+        <div class="investment_management_content">
+          <span class="total">总投资额</span>
+          <span class="in_place">资金到位情况</span>
+          <span class="plan">2018计划投资额</span>
+        </div>
+        <div id="mychart_pie_three"></div>
+        <div id="mychart_pie_four"></div>
+        <div class="capital">600800 (万元)</div>
+        <i class="row row1"></i>
+        <i class="row row2"></i>
+        <i class="col col2"></i>
+        <i class="col col1"></i>
+      </div>
+      <div class="investment_bar">
+        <div id="mychart_bar"></div>
+        <i class="row row1"></i>
+        <i class="row row2"></i>
+        <i class="col col2"></i>
+        <i class="col col1"></i>
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div class="index_bottom">
+    <!-- 底部左侧 -->
+    <div class="annulus">
+      <div class="annulus_title">
+        <span class="">安环综治</span>
+        <span class="annulus_state">安环状态</span>
+      </div>
+      <ul>
+        <li>
+          <div class="annulus_content_title">安全生产检查合格率</div>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent="80%"></div>
+          </div>
+        </li>
+        <li>
+          <div class="annulus_content_title">安全生产检查合格率</div>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent="90%"></div>
+          </div>
+        </li>
+        <li>
+          <div class="annulus_content_title">安全生产检查合格率</div>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent="100%"></div>
+          </div>
+        </li>
+        <li>
+          <div class="annulus_content_title">安全生产检查合格率</div>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent="200/600"></div>
+          </div>
+        </li>
+        <li>
+          <div class="annulus_content_title">安全生产检查合格率</div>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent="60%"></div>
+          </div>
+        </li>
+        <li>
+          <div class="annulus_content_title">安全生产检查合格率</div>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent="500/600"></div>
+          </div>
+        </li>
+      </ul>
+      <i class="row row1"></i>
+      <i class="row row2"></i>
+      <i class="col col2"></i>
+      <i class="col col1"></i>
+    </div>
+    <!-- 底部右侧 -->
+    <div class="working_condition">
+      <div class="working_condition_title">工作状态</div>
+      <div class="working_condition_content">
+        <table>
+          <tr>
+            <td class="serial_number">序号</td>
+            <td class="entry_name">项目名称</td>
+            <td class="project_address">项目地址</td>
+            <td class="project_type">项目类型</td>
+            <td class="matter">事项</td>
+            <td class="submission_time">提交时间</td>
+            <td class="responsible_unit">责任单位</td>
+            <td class="responsible_leadership">分管领导</td>
+            <td class="detonation_lamp">爆灯状况</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>贡嘎县农作物病虫疫情区域应急防治中心</td>
+            <td>贡嘎县</td>
+            <td>续建复工农牧林水</td>
+            <td>基础验收通过</td>
+            <td>2018.01.01</td>
+            <td>农牧局</td>
+            <td>索朗曲巴副市长</td>
+            <td><img src="./imgs/red_light.png" alt=""></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>乃东区野生动植物救护站基础设施项目</td>
+            <td>乃东区</td>
+            <td>新开工环境资源</td>
+            <td>发改立项通过</td>
+            <td>2018.01.02</td>
+            <td>发改委</td>
+            <td>黄金城副市长</td>
+            <td><img src="./imgs/yellow_light.png" alt=""></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>乃东区野生动植物救护站基础设施项目</td>
+            <td>乃东区</td>
+            <td>新开工环境资源</td>
+            <td>发改立项通过</td>
+            <td>2018.01.02</td>
+            <td>发改委</td>
+            <td>黄金城副市长</td>
+            <td><img src="./imgs/yellow_light.png" alt=""></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>乃东区野生动植物救护站基础设施项目</td>
+            <td>乃东区</td>
+            <td>新开工环境资源</td>
+            <td>发改立项通过</td>
+            <td>2018.01.02</td>
+            <td>发改委</td>
+            <td>黄金城副市长</td>
+            <td><img src="./imgs/red_light.png" alt=""></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>乃东区野生动植物救护站基础设施项目</td>
+            <td>乃东区</td>
+            <td>新开工环境资源</td>
+            <td>发改立项通过</td>
+            <td>2018.01.02</td>
+            <td>发改委</td>
+            <td>黄金城副市长</td>
+            <td><img src="./imgs/red_light.png" alt=""></td>
+          </tr>
+        </table>
+      </div>
+      <i class="row row1"></i>
+      <i class="row row2"></i>
+      <i class="col col2"></i>
+      <i class="col col1"></i>
+    </div>
+  </div>
+  <div class="container hidden">
+    <div class="content">
+      <div class="content-title">
+        <div class="content-title-text">
+          山南市2018年国家投资项目计划表
+        </div>
+        <div class="del">
+          <img src="./imgs/close.png">
+        </div>
+      </div>
+      <div class="content-form">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th rowspan="2" width='10%'>序号</th>
+              <th rowspan="2" width='10%'>县名</th>
+              <th colspan="2">2017年项目情况</th>
+              <th colspan="4">2018年项目计划</th>
+              <th rowspan="2" width='10%'>责任人</th>
+              <th rowspan="2">备注</th>
+            </tr>
+            <tr>
+              <th width='10%'>计划投资</th>
+              <th width='10%'>实际完成投资</th>
+              <th width='10%'>项目个数</th>
+              <th width='10%'>开工个数</th>
+              <th width='10%'>项目总投资</th>
+              <th width='10%'>计划完成投资</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">合计</td>
+              <td>1986243</td>
+              <td>2045266</td>
+              <td>562</td>
+              <td>420</td>
+              <td>9656050</td>
+              <td>2464191</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>琼结县</td>
+              <td>31793</td>
+              <td>38761</td>
+              <td>35</td>
+              <td>26</td>
+              <td>78633</td>
+              <td>45347</td>
+              <td>索朗多吉</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>洛扎县</td>
+              <td>96169</td>
+              <td>95145</td>
+              <td>36</td>
+              <td>28</td>
+              <td>319645</td>
+              <td>184425</td>
+              <td>白玛多吉</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>乃东县</td>
+              <td>369201</td>
+              <td>372550</td>
+              <td>118</td>
+              <td>86</td>
+              <td>1359974</td>
+              <td>401875</td>
+              <td>张维</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>贡嘎县</td>
+              <td>299345</td>
+              <td>316659</td>
+              <td>54</td>
+              <td>38</td>
+              <td>1366652</td>
+              <td>354353</td>
+              <td>次仁</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>错那县</td>
+              <td>99177</td>
+              <td>132034</td>
+              <td>40</td>
+              <td>32</td>
+              <td>389350</td>
+              <td>177513</td>
+              <td>布多</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>隆子县</td>
+              <td>118507</td>
+              <td>113284</td>
+              <td>39</td>
+              <td>33</td>
+              <td>402830</td>
+              <td>213894</td>
+              <td>刘圣育</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>加查县</td>
+              <td>201671</td>
+              <td>187573</td>
+              <td>42</td>
+              <td>30</td>
+              <td>2189662</td>
+              <td>222637</td>
+              <td>西洛次仁</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>曲松县</td>
+              <td>73391</td>
+              <td>69984</td>
+              <td>32</td>
+              <td>26</td>
+              <td>141433</td>
+              <td>69625</td>
+              <td>拉巴次仁</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>扎囊县</td>
+              <td>317012</td>
+              <td>342044</td>
+              <td>47</td>
+              <td>33</td>
+              <td>1075173</td>
+              <td>281167</td>
+              <td>唐勇</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>桑日县</td>
+              <td>228540</td>
+              <td>218531</td>
+              <td>31</td>
+              <td>22</td>
+              <td>1837987</td>
+              <td>224265</td>
+              <td>吾金</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>措美县</td>
+              <td>58520</td>
+              <td>69958</td>
+              <td>36</td>
+              <td>28</td>
+              <td>284490</td>
+              <td>151456</td>
+              <td>巴桑欧珠</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>浪卡子县</td>
+              <td>92917</td>
+              <td>88743</td>
+              <td>52</td>
+              <td>38</td>
+              <td>210221</td>
+              <td>137634</td>
+              <td>罗文金</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <i class="row row1"></i>
+      <i class="row row2"></i>
+      <i class="col col2"></i>
+      <i class="col col1"></i>
+    </div>
+  </div>
+  <script src="./js/longzi.js"></script>
+  <script>
+    $(function() {
+      $(".dingwei0").mouseover( function () {
+        $(".dingwei00").removeClass('hidden')
+      })
+      $(".dingwei0").mouseleave( function () {
+        $(".dingwei00").addClass('hidden')
+      })
+      $(".dingwei1").mouseover( function () {
+        $(".dingwei11").removeClass('hidden')
+      })
+      $(".dingwei1").mouseleave( function () {
+        $(".dingwei11").addClass('hidden')
+      })
+      $(".dingwei2").mouseover( function () {
+        $(".dingwei22").removeClass('hidden')
+      })
+      $(".dingwei2").mouseleave( function () {
+        $(".dingwei22").addClass('hidden')
+      })
+      $(".dingwei3").mouseover( function () {
+        $(".dingwei33").removeClass('hidden')
+      })
+      $(".dingwei3").mouseleave( function () {
+        $(".dingwei33").addClass('hidden')
+      })
+      $(".dingwei4").mouseover( function () {
+        $(".dingwei44").removeClass('hidden')
+      })
+      $(".dingwei4").mouseleave( function () {
+        $(".dingwei44").addClass('hidden')
+      })
+      $(".dingwei5").mouseover( function () {
+        $(".dingwei55").removeClass('hidden')
+      })
+      $(".dingwei5").mouseleave( function () {
+        $(".dingwei55").addClass('hidden')
+      })
+      $(".dingwei6").mouseover( function () {
+        $(".dingwei66").removeClass('hidden')
+      })
+      $(".dingwei6").mouseleave( function () {
+        $(".dingwei66").addClass('hidden')
+      })
+      $(".dingwei7").mouseover( function () {
+        $(".dingwei77").removeClass('hidden')
+      })
+      $(".dingwei7").mouseleave( function () {
+        $(".dingwei77").addClass('hidden')
+      })
+    })
+    
+  </script>
+</body>
+
+</html>
